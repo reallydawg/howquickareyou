@@ -5,19 +5,25 @@ Reaction Time Game Details
 User Input Controls
 
 	•	Left Button (Button A):
-	•	Function: Starts the game
-	•	Assignment: Game initiation
+	•	Function: Starts the round
+	•	Assignment: Round initiation
 	•	Threshold/Map Function: Not applicable
  
 	•	Right Button (Button B):
 	•	Function: Registers the player’s reaction
 	•	Assignment: Reaction time measurement
 	•	Threshold/Map Function: Not applicable
+ 		
+  	•       Slide Switch (Switch A & B):
+	•	Function: Starts and resets the game
+	•	Assignment: Game initiation
+	•	Threshold/Map Function: Left=game started & Right=game reset
+ 
 
 Game Rules
 
 	1.	Starting the Game:
-	•	The player presses the left button (Button A) to start the game.
+	•	The player flips the switch (Switch A) to start the game.
  
 	2.	Game Levels:
 	•	The game consists of 5 levels.
@@ -43,7 +49,7 @@ Sensors Used
 	•	Sensor: Built-in buttons on Adafruit Circuit Playground Express
 	•	Function: Detect user input for starting the game and reacting to the LED.
 	•	Raw Range: 0 (not pressed) to 1 (pressed)
-	•	Assignment: Left Button for starting the game, Right Button for measuring reaction time
+	•	Assignment: Left Button for starting the round, Right Button for measuring reaction time
 	•	Threshold/Map Function: Direct digital read, no threshold or map function needed.
  
 	2.	LEDs (Output Sensors):
@@ -60,6 +66,13 @@ Sensors Used
 	•	Assignment: Play tones to signal game start, level start, and correct reaction.
 	•	Threshold/Map Function: Not applicable
 
+  	4.	Slide Switch (Input Sensors)
+   	• 	Sensor: Built-in slide switch on Adafruit Circuit Playground Express
+    	•	Funtion: Detects user input to start or reset the game
+     	•	Raw Range: 0 (Slide Left) to 1 (Slide Right)
+      	•	Assignment: Left Slide for starting game and Right Slide for reseting the game. 
+        •	Threshold/Map Function: Direct digital read, no threshold or map function needed. 
+
 Threshold and Map Functions
 
 	•	Buttons:
@@ -68,6 +81,8 @@ Threshold and Map Functions
 	•	No threshold or mapping functions are applied. LEDs are controlled directly using RGB values.
 	•	Speaker:
 	•	No threshold or mapping functions are applied. Tones are played with specified frequencies and durations.
+  	•       Slide Switch:
+   	•       No threshold or mapping functions are applied since the buttons are digital inputs with states 0 or 1. 
 
 Summary
 
